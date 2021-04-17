@@ -1,0 +1,6 @@
+#ignore_directories
+node_modules
+vendor
+.idea
+debug.log
+
