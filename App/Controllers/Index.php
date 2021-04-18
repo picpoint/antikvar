@@ -8,7 +8,9 @@ class Index
 {
 
     public function actionIndex() {
-        echo "Index page !!!";
+        echo "Главная страница сайта \"Антиквар\" ";
     }
+
+
 
 }
