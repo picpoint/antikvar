@@ -10,6 +10,12 @@
 <body>
 
     <h3>Антиквар(сайт антиквариата)</h3>
+    <br>
+    <br>
+
+    <?php
+        var_dump($_SERVER['REQUEST_URI']);
+    ?>
 
 </body>
 </html>

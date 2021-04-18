@@ -3,13 +3,21 @@
 
 namespace App\Controllers;
 
+use App\Controllers\View;
 
 class Index
 {
 
     public function actionIndex() {
-        echo "Главная страница сайта \"Антиквар\" ";
+        $page = new View();
+        $page->display('Views/index.php');
     }
+
+    public function actionAbout() {
+        $page = new View();
+        $page->display('Views/about.php');
+    }
+
 
 
 
