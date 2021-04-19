@@ -9,8 +9,16 @@ $route = $_SERVER['REQUEST_URI'];
 
 
 
+if($route == '/') {
+    $page = new Index();
+    $page->actionIndex();
+} elseif ($route == '/about') {
+    $page = new Index();
+    $page->actionAbout();
+}
 
-$indexP = new Index();
-$indexP->actionIndex();
+
+
+
 
 
