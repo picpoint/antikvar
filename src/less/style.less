@@ -18,32 +18,32 @@
   display: flex;
   height: 100vh;
     &__wrp {
-      border: @border;
+      //border: @border;
       display: flex;
       flex-direction: column;
       width: 100%;
     }
     &__hdr {
-      border: @border;
+      //border: @border;
       display: flex;
       justify-content: center;
       width: 100%;
       height: 110px;
     }
     &__hdrcontent {
-      border: @border;
+      //border: @border;
       display: flex;
       justify-content: space-between;
       width: 75%;
     }
     &__hdrcontacts {
-      border: @border;
+      //border: @border;
       display: flex;
       flex-direction: column;
       width: 30%;
     }
     &__hdrcontactstel {
-      border: @border;
+      //border: @border;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -58,7 +58,7 @@
         }
     }
     &__hdrcontacstmail {
-      border: @border;
+      //border: @border;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -74,21 +74,84 @@
     }
 
     &__hdrlogo {
-      border: @border;
+      //border: @border;
       display: flex;
       justify-content: center;
       width: 30%;
 
     }
     &__hdrauth {
-      border: @border;
+      //border: @border;
+      display: flex;
+      flex-direction: column;
       width: 30%;
     }
-    &__hdrauthblock {
-
+    &__hdrauthreg {
+      //border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+        i {
+          font-size: 1.7rem;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+          span {
+            font-size: 1.1rem;
+            margin-left: 5px;
+            font-weight: bold;
+          }
+        }
+    }
+    &__hdrauthlogin {
+      //border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+        i {
+          font-size: 1.7rem;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+          span {
+            font-size: 1.1rem;
+            margin-left: 5px;
+            font-weight: bold;
+          }
+        }
     }
 
+  &__menu {
+    border: @border;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    background-color: black;
+  }
+  &__menucontent {
+    border: @border;
+    display: flex;
+    width: 75%;
 
+  }
+  &__menucontentlinks {
+    border: @border;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 65%;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+  }
+  &__menucontentfind {
+
+  }
 
 }
 
