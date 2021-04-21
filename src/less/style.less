@@ -13,6 +13,38 @@
   box-sizing: border-box;  
 }
 
+//***********************************
+// MIXINS
+
+.mixinbdysections {
+  //border: @border;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  &:hover {
+    border: 1px solid black;
+    transition: @transition;
+  }
+  a {
+    //border: @border;
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    width: 100%;
+    height: 100%;
+    img {
+      height: 100%;
+      margin: 0 15px 0 10px;
+    }
+  }
+}
+
+//***********************************
+
+
 
 .indx {
   display: flex;
@@ -147,6 +179,11 @@
       a {
         text-decoration: none;
         color: white;
+        transition: @transition;
+          &:hover {
+            font-weight: bolder;
+            transition: @transition;
+          }
       }
   }
   &__menucontentfind {
@@ -177,16 +214,45 @@
     width: 75%;
   }
   &__bdycategory {
-    border: @border;
+    //border: @border;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 25%;
-      span {
-        font-size: 2rem;
-        font-weight: bold;
-      }
   }
+  &__bdycategoryhdr {
+    border: @border;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+    span {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+  &__bdycategorysections {
+    border: @border;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin-top: 7px;
+  }
+  &__bdybonistika {
+    .mixinbdysections();
+  }
+  &__bdymoneti {
+    .mixinbdysections();
+  }
+  &__bdyknigi {
+    .mixinbdysections();
+  }
+  &__bdymilitary {
+    .mixinbdysections();
+  }
+
+
   &__bdycatalog {
     border: @border;
     width: 75%;

@@ -45,11 +45,11 @@
             <div class="indx__menu">
                 <div class="indx__menucontent">
                     <div class="indx__menucontentlinks">
-                        <a href="#">Ссылка 1</a>
-                        <a href="#">Ссылка 2</a>
-                        <a href="#">Ссылка 3</a>
-                        <a href="#">Ссылка 4</a>
-                        <a href="#">Ссылка 5</a>
+                        <a href="#">Оплата покупок</a>
+                        <a href="#">Доставка по РФ</a>
+                        <a href="#">Гарантия</a>
+                        <a href="#">Полезные статьи</a>
+                        <a href="#">Контакты</a>
                     </div>
                     <div class="indx__menucontentfind">
                         <input type="search" placeholder="поиск по сайту">
@@ -61,7 +61,23 @@
             <div class="indx__bdy">
                 <div class="indx__bdywrp">
                     <div class="indx__bdycategory">
-                        <span>Категории</span>
+                        <div class="indx__bdycategoryhdr">
+                            <span>Категории</span>
+                        </div>
+                        <div class="indx__bdycategorysections">
+                            <div class="indx__bdybonistika">
+                                <a href="#"><img src="/../public/pict/bon.png" alt="bon"><span>Бонистика</span></a>
+                            </div>
+                            <div class="indx__bdymoneti">
+                                <a href="#"><img src="/../public/pict/monet.png" alt="monety"><span>Монеты</span></a>
+                            </div>
+                            <div class="indx__bdyknigi">
+                                <a href="#"><img src="/../public/pict/book.png" alt="knigi"><span>Книги</span></a>
+                            </div>
+                            <div class="indx__bdymilitary">
+                                <a href="#"><img src="/../public/pict/military.png" alt="bon"><span>Милитария</span></a>
+                            </div>
+                        </div>
                     </div>
                     <div class="indx__bdycatalog">
 
