@@ -58,6 +58,17 @@
                 </div>
             </div>
 
+            <div class="indx__bdy">
+                <div class="indx__bdywrp">
+                    <div class="indx__bdycategory">
+                        <span>Категории</span>
+                    </div>
+                    <div class="indx__bdycatalog">
+
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
