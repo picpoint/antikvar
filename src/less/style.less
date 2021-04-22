@@ -17,10 +17,11 @@
 // MIXINS
 
 .mixinbdysections {
-  //border: @border;
+  //border: none;
   display: flex;
   align-items: center;
   height: 40px;
+  transition: @transition;
   &:hover {
     border: 1px solid black;
     transition: @transition;
@@ -35,10 +36,16 @@
     font-size: 1.1rem;
     width: 100%;
     height: 100%;
-    img {
-      height: 100%;
-      margin: 0 15px 0 10px;
-    }
+    transition: @transition;
+      &:hover {
+        font-weight: bolder;
+        font-size: 1.2rem;
+        transition: @transition;
+      }
+      img {
+        height: 100%;
+        margin: 0 15px 0 10px;
+      }
   }
 }
 
@@ -183,6 +190,7 @@
           &:hover {
             font-weight: bolder;
             transition: @transition;
+            font-size: 1.1rem;
           }
       }
   }
@@ -203,10 +211,9 @@
   }
 
   &__bdy {
-    border: @border;
+    //border: @border;
     display: flex;
     justify-content: center;
-    height: 800px;
   }
   &__bdywrp {
     border: @border;
@@ -239,19 +246,72 @@
     width: 100%;
     margin-top: 7px;
   }
-  &__bdybonistika {
+  &__bdybons {
     .mixinbdysections();
   }
-  &__bdymoneti {
+  &__bdycoins {
     .mixinbdysections();
   }
-  &__bdyknigi {
+  &__bdybooks {
     .mixinbdysections();
   }
   &__bdymilitary {
     .mixinbdysections();
   }
-
+  &__bdypostmarks {
+    .mixinbdysections();
+  }
+  &__bdyhandmade {
+    .mixinbdysections();
+  }
+  &__bdymailenvelopes {
+    .mixinbdysections();
+  }
+  &__bdytransport {
+    .mixinbdysections();
+  }
+  &__bdyorders {
+    .mixinbdysections();
+  }
+  &__bdyhobby {
+    .mixinbdysections();
+  }
+  &__bdyphoto {
+    .mixinbdysections();
+  }
+  &__bdyicons {
+    .mixinbdysections();
+  }
+  &__bdyceramik {
+    .mixinbdysections();
+  }
+  &__bdydishes {
+    .mixinbdysections();
+  }
+  &__bdypainting {
+    .mixinbdysections();
+  }
+  &__bdyother {
+    .mixinbdysections();
+  }
+  &__bdyglass {
+    .mixinbdysections();
+  }
+  &__bdyinteryer {
+    .mixinbdysections();
+  }
+  &__bdymaps {
+    .mixinbdysections();
+  }
+  &__bdyjewelry {
+    .mixinbdysections();
+  }
+  &__bdyfurniture {
+    .mixinbdysections();
+  }
+  &__bdytech {
+    .mixinbdysections();
+  }
 
   &__bdycatalog {
     border: @border;
