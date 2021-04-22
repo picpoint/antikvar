@@ -20,6 +20,11 @@ class Index
         $page->display('Views/about.php');
     }
 
+    public function actionRegistration() {
+        $page = new View();
+        $page->display('Views/registration.php');
+    }
+
 
 
 

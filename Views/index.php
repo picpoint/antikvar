@@ -32,7 +32,7 @@
                     <div class="indx__hdrauth">
                         <div class="indx__hdrauthreg">
                             <i class="fa fa-address-card" aria-hidden="true"></i>
-                            <a href="#"><span>Регистрация</span></a>
+                            <a href="registration"><span>Регистрация</span></a>
                         </div>
                         <div class="indx__hdrauthlogin">
                             <i class="fa fa-user-circle" aria-hidden="true"></i>
