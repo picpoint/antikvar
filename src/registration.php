@@ -20,6 +20,12 @@
                     <input type="text" name="reglogin" placeholder="Логин">
                     <input type="password" name="regpassword" placeholder="Пароль">
                     <button type="submit" name="regbtn">Зарегистрироваться</button>
+
+                    <?php
+                        $res = new App\Controllers\Registration();
+                        $res->actionRegistration();
+                    ?>
+
                 </form>
             </div>
         </div>
