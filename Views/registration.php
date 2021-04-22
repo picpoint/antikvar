@@ -14,11 +14,12 @@
         <div class="reg__wrp">
             <div class="reg__regform">
                 <form method="post" class="reg__form">
-                    <h3>Регистрация</h3>
+                    <span>Регистрация</span>
                     <input type="text" name="regfirstname" placeholder="Имя">
                     <input type="text" name="reglastname" placeholder="Фамилия">
                     <input type="text" name="reglogin" placeholder="Логин">
-                    <input type="password" name="regpassword">
+                    <input type="password" name="regpassword" placeholder="Пароль">
+                    <button type="submit" name="regbtn">Зарегистрироваться</button>
                 </form>
             </div>
         </div>

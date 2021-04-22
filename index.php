@@ -18,6 +18,9 @@ if($route == '/') {
 } elseif ($route == '/registration') {
     $page = new Index();
     $page->actionRegistration();
+} elseif ($route == '/authorization') {
+    $page = new Index();
+    $page ->actionAuthorization();
 }
 
 

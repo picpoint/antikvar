@@ -25,6 +25,11 @@ class Index
         $page->display('Views/registration.php');
     }
 
+    public function actionAuthorization() {
+        $page = new View();
+        $page->display('Views/authorization.php');
+    }
+
 
 
 

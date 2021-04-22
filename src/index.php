@@ -36,7 +36,7 @@
                         </div>
                         <div class="indx__hdrauthlogin">
                             <i class="fa fa-user-circle" aria-hidden="true"></i>
-                            <a href="#"><span>Авторизация</span></a>
+                            <a href="authorization"><span>Авторизация</span></a>
                         </div>
                     </div>
                 </div>
