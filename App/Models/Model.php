@@ -7,9 +7,13 @@ use App\Models\Db;
 class Model
 {
 
-    public function save(array $arrData) {
+    public function regUser(array $arrData) {
         $db = new Db();
-        $sql = "INSERT INTO `users` (`firstname`, `lastname`, `login`, `password`) VALUES ('$arrData[0]', '$arrData[1]', '$arrData[2]', '$arrData[3]')";
+        $fistname = $arrData[0];
+        $lastname = $arrData[1];
+        $login = $arrData[2];
+        $password = password_hash($arrData[3], PASSWORD_DEFAULT);
+        $sql = "INSERT INTO `users` (`firstname`, `lastname`, `login`, `password`) VALUES ('$fistname', '$lastname', '$login', '$password')";
         return $db->execsql($sql);
     }
 
