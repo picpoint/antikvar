@@ -21,8 +21,7 @@ class Registration extends Model
             $this->regArr[] = $_POST['regpassword'];
 
             $res = new Model();
-            $res->save();
-//            var_dump($this->regArr);
+            $res->save($this->regArr);
         }
     }
 

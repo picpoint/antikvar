@@ -7,11 +7,10 @@ use App\Models\Db;
 class Model
 {
 
-    public function save() {
+    public function save(array $arrData) {
         $db = new Db();
-        $sql = "INSERT INTO users (firsname, lastname, login, password) VALUES ('Vasya', 'Pupkin', 'vaspup', '2203') ";
-        $sth = $db->prepare($sql);
-        return $sth->execute();
+        $sql = "INSERT INTO `users` (`firstname`, `lastname`, `login`, `password`) VALUES ('$arrData[0]', '$arrData[1]', '$arrData[2]', '$arrData[3]')";
+        return $db->execsql($sql);
     }
 
 }
