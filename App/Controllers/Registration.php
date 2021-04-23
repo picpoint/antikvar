@@ -25,7 +25,9 @@ class Registration extends Model
                 $res = new Model();
                 $res = $res->regUser($this->regArr);
 
-                header("Location: index.php");
+                header("Location: /");
+                exit;
+
             } else {
                 die("Не все поля заполнены");
             }
