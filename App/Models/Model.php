@@ -4,6 +4,8 @@ namespace App\Models;
 
 use App\Models\Db;
 
+
+
 class Model
 {
 
@@ -16,5 +18,13 @@ class Model
         $sql = "INSERT INTO `users` (`firstname`, `lastname`, `login`, `password`) VALUES ('$fistname', '$lastname', '$login', '$password')";
         return $db->execsql($sql);
     }
+
+
+    public function getAll() {
+        $db = new Db();
+//        $sql = "SELECT * FROM "
+    }
+
+
 
 }

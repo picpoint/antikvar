@@ -1,5 +1,5 @@
 <?php
-    $res = new App\Controllers\Registration();
+    $res = new App\Controllers\RegistrationC();
     $res->actionRegistration();
 ?>
 
@@ -25,9 +25,6 @@
                     <input type="text" name="reglogin" placeholder="Логин">
                     <input type="password" name="regpassword" placeholder="Пароль">
                     <button type="submit" name="regbtn">Зарегистрироваться</button>
-
-
-
                 </form>
             </div>
         </div>
