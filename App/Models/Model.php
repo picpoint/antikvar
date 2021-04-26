@@ -7,6 +7,9 @@ use App\Models\Db;
 class Model
 {
 
+    public static $table = '';
+
+
 
     public function getAll() {
         $db = new Db();
@@ -18,9 +21,8 @@ class Model
 
     public function regUser() {
         $db = new Db();
-        $sql = "INSERT INTO `users` (`firstname`, `lastname`, `login`, `password`) VALUES ('Vasya', 'Pupkin', 'vaspup', '123456qwerty') ";
-        $sth = $db->prepare($sql);
-        return $sth->execute();
+        $sql = "INSERT INTO " . static::$table . " (`firstname`, `lastname`, `login`, `password`) VALUES ('Vasya', 'Pupkin', 'vaspup', '123456qwerty') ";
+        return $db->execute($sql);
     }
 
 }

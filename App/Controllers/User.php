@@ -19,4 +19,9 @@ class User extends Model
     public static $table = 'users';
 
 
+    public function someUsr() {
+        print_r($_POST['regfirstname']);
+    }
+
+
 }
