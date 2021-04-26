@@ -1,6 +1,7 @@
 <?php
     $res = new App\Controllers\RegistrationC();
-    $res->actionRegistration();
+//    $res->actionRegistration();
+    $res->getAll();
 ?>
 
 <!doctype html>

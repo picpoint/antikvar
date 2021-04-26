@@ -20,9 +20,11 @@ class Model
     }
 
 
+
     public function getAll() {
         $db = new Db();
-//        $sql = "SELECT * FROM "
+        $sql = "SELECT * FROM users ";
+        return $db->execsql($sql);
     }
 
 
