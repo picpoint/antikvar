@@ -1,7 +1,12 @@
 <?php
+<<<<<<< HEAD
+    $user = new App\Controllers\User();
+    $user->regUser();
+=======
     $res = new App\Controllers\RegistrationC();
 //    $res->actionRegistration();
     $res->getAll();
+>>>>>>> origin/master
 ?>
 
 <!doctype html>
