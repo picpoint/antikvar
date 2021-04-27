@@ -16,11 +16,18 @@ class User extends Model
     public $login;
     public $password;
 
-    public static $table = 'users';
+    public $table = 'users';
+    public $regData = [];
 
 
     public function someUsr() {
-        print_r($_POST['regfirstname']);
+        $this->regData[] = $_POST['regfirstname'];
+        $this->regData[] = $_POST['reglastname'];
+        $this->regData[] = mb_strtolower($_POST['reglogin']);
+        $this->regData[] = password_hash($_POST['regpassword'], PASSWORD_DEFAULT);
+
+        $reg = new Model();
+        return $reg->regUser($this->regData, $this->table);
     }
 
 

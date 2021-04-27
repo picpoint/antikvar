@@ -1,7 +1,7 @@
 <?php
     $user = new App\Controllers\User();
-    $user->regUser();
-//    $user->someUsr();
+//    $user->regUser();
+    $user->someUsr();
 ?>
 
 <!doctype html>
