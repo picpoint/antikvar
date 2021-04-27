@@ -14,6 +14,13 @@ class Db
     }
 
 
+    public function findAll($sql) {
+        $sth = $this->cnnct -> prepare($sql);
+        $sth->execute();
+        return $sth->fetchAll(\PDO::FETCH_CLASS);
+    }
+
+
     public function execute(string $sql) {
         $sth = $this->cnnct -> prepare($sql);
         return $sth -> execute();

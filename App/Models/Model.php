@@ -11,10 +11,10 @@ class Model
 
 
 
-    public function getAll() {
+    public function getAllUsers($table) {
         $db = new Db();
-        $sql = "SELECT * FROM users";
-        return $db->execute($sql);
+        $sql = "SELECT * FROM " . $table;
+        return $db->findAll($sql);
     }
 
 

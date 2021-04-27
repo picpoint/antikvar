@@ -1,3 +1,7 @@
+<?php
+    $auth = new App\Controllers\User();
+    $auth->actionAuthUser();
+?>
 <!doctype html>
 <html lang="en">
 <head>
