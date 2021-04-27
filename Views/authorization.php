@@ -1,6 +1,6 @@
 <?php
-    $auth = new App\Controllers\User();
-    $auth->actionAuthUser();
+    $auth = App\Controllers\User::actionAuthUser();
+    print_r($auth);
 ?>
 <!doctype html>
 <html lang="en">

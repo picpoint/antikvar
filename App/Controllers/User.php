@@ -17,8 +17,10 @@ class User extends Model
     public $password;
 
     public $table = 'users';
+    public static $tbl = 'users';
     public $regData = [];
     public $authData = [];
+
 
 
     public function actionRegUser() {
@@ -42,14 +44,14 @@ class User extends Model
 
 
 
-    public function actionAuthUser() {
+    public static function actionAuthUser() {
         if(isset($_POST['authbtn'])) {
             if(!empty($_POST['authlogin']) && !empty($_POST['authpass'])) {
-                $this->authData[] = $_POST['authlogin'];
-                $this->authData[] = $_POST['authpass'];
+                $authData[] = $_POST['authlogin'];
+                $authData[] = $_POST['authpass'];
 
                 $allUsers = new Model();
-                print_r($allUsers->getAllUsers($this->table));
+                print_r($allUsers->getAllUsers(static::$tbl));
             }
         }
     }
