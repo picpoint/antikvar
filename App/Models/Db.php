@@ -7,6 +7,8 @@ namespace App\Models;
 class Db
 {
 
+    protected $cnnct;
+
     public function __construct()
     {
         $config = (require __DIR__ . '/../../config.php')['db'];
@@ -14,17 +16,12 @@ class Db
     }
 
 
-    public function findAll($sql) {
+    public function getData(string $sql) {
         $sth = $this->cnnct -> prepare($sql);
-        $sth->execute();
+        $sth -> execute();
         return $sth->fetchAll(\PDO::FETCH_CLASS);
     }
 
-
-    public function execute(string $sql) {
-        $sth = $this->cnnct -> prepare($sql);
-        return $sth -> execute();
-    }
 
 
 }

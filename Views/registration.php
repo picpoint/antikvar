@@ -1,6 +1,6 @@
 <?php
-    $user = new App\Controllers\User();
-    $user->actionRegUser();
+    $res = new App\Models\Product();
+    print_r($res->findAll());
 ?>
 
 <!doctype html>

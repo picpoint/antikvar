@@ -1,6 +1,6 @@
-<?php
-    $auth = App\Controllers\User::actionAuthUser();
-    print_r($auth);
+<?
+    $res = new App\Models\User();
+    print_r($res->findAll());
 ?>
 <!doctype html>
 <html lang="en">

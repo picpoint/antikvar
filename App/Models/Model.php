@@ -4,29 +4,19 @@ namespace App\Models;
 
 use App\Models\Db;
 
-class Model
+
+abstract class Model
 {
+    public $id;
+    public static $table = '';
 
-//    public static $table = '';
 
-
-
-    public function getAllUsers($table) {
+    public function findAll() {
         $db = new Db();
-        $sql = "SELECT * FROM " . $table;
-        return $db->findAll($sql);
+        $sql = "SELECT * FROM " . static::$table;
+        return $db->getData($sql);
     }
 
 
-
-    public function regUser($data, $table) {
-        $db = new Db();
-        $firstname = $data[0];
-        $lastname = $data[1];
-        $login = $data[2];
-        $password = $data[3];
-        $sql = "INSERT INTO " . $table . " (`firstname`, `lastname`, `login`, `password`) VALUES ('$firstname', '$lastname', '$login', '$password') ";
-        return $db->execute($sql);
-    }
 
 }
