@@ -18,8 +18,4 @@ class User extends Model
 
 
 
-
-
-
-
 }

@@ -16,10 +16,10 @@ class Db
     }
 
 
-    public function getData(string $sql) {
+    public function getData(string $sql, $class) {
         $sth = $this->cnnct -> prepare($sql);
         $sth -> execute();
-        return $sth->fetchAll(\PDO::FETCH_CLASS);
+        return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
     }
 
 
