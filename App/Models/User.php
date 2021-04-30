@@ -5,6 +5,10 @@ namespace App\Models;
 use App\Models\Db;
 
 
+
+/**
+ * класс модель пользователей
+ */
 class User extends Model
 {
 

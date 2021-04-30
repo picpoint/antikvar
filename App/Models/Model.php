@@ -5,6 +5,9 @@ namespace App\Models;
 use App\Models\Db;
 
 
+/**
+ * абстрактный класс модель запросов для моделей типа "User", "Product" и пр.
+ */
 abstract class Model
 {
     public $id;

@@ -5,6 +5,9 @@ namespace App\Models;
 use App\Models\Db;
 
 
+/**
+ * класс модель товаров
+ */
 class Product extends Model
 {
 

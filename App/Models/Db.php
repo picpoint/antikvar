@@ -4,10 +4,14 @@
 namespace App\Models;
 
 
+/**
+ * Класс для работы с БД напрямую
+ */
 class Db
 {
 
     protected $cnnct;
+
 
     public function __construct()
     {
@@ -16,6 +20,9 @@ class Db
     }
 
 
+    /**
+     * метод получения всех записей из БД
+     */
     public function getData(string $sql, $class) {
         $sth = $this->cnnct -> prepare($sql);
         $sth -> execute();
