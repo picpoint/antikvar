@@ -2,12 +2,8 @@
 
 namespace App\Models;
 
-use App\Models\Db;
 
 
-/**
- * класс модель товаров
- */
 class Product extends Model
 {
 
@@ -18,6 +14,7 @@ class Product extends Model
     public $category;
 
     public static $table = 'products';
+
 
 
 

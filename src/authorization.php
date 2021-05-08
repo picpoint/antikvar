@@ -1,7 +1,8 @@
-<?
-    $res = new App\Models\User();
+<?php
+    $res = new App\Models\Product();
     print_r($res->findAll());
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>

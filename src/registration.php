@@ -1,5 +1,5 @@
 <?php
-    $res = new App\Models\Product();
+    $res = new App\Models\User();
     print_r($res->findAll());
 ?>
 
