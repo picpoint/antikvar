@@ -30,6 +30,9 @@ class Db
     }
 
 
+    /**
+     * метод сохранения данных в БД
+     */
     public function save(string $sql) {
         $sth = $this->cnnct->prepare($sql);
         $sth->execute();
