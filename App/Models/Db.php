@@ -30,8 +30,9 @@ class Db
     }
 
 
-    public function save(string $table) {
-
+    public function save(string $sql) {
+        $sth = $this->cnnct->prepare($sql);
+        $sth->execute();
     }
 
 
