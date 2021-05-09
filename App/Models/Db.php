@@ -30,5 +30,10 @@ class Db
     }
 
 
+    public function save(string $table) {
+
+    }
+
+
 
 }

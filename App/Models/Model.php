@@ -7,6 +7,7 @@ abstract class Model
 {
 
     public $id;
+    public static $table = '';
 
 
     public function findAll() {
@@ -14,7 +15,10 @@ abstract class Model
         $class = get_called_class();
         $sql = "SELECT * FROM " . static::$table;
         return $db->getData($sql, $class);
-
     }
+
+
+
+
 
 }

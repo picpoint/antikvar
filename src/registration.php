@@ -1,6 +1,6 @@
 <?php
     $res = new App\Models\User();
-    print_r($res->findAll());
+    $res->regUser();
 ?>
 
 <!doctype html>
