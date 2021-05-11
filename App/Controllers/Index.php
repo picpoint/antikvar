@@ -15,11 +15,6 @@ class Index
         $page->display('Views/index.php');
     }
 
-    public function actionAbout() {
-        $page = new View();
-        $page->display('Views/about.php');
-    }
-
     public function actionRegistration() {
         $page = new View();
         $page->display('Views/registration.php');
@@ -28,6 +23,16 @@ class Index
     public function actionAuthorization() {
         $page = new View();
         $page->display('Views/authorization.php');
+    }
+
+    public function actionPersonalPage() {
+        $page = new View();
+        $page->display('Views/personalPage.php');
+    }
+
+    public function actionPageNotFound() {
+        $page = new View();
+        $page->display('Views/404.php');
     }
 
 

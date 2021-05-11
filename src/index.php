@@ -141,6 +141,11 @@
                 </div>
             </div>
 
+            <div class="indx__footer">
+                <span>Все права не защищены ... </span>
+                <span> Всех прав не защитить ... </span>
+            </div>
+
         </div>
     </section>
 

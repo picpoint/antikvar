@@ -70,7 +70,7 @@ class User extends Model
                 }
 
                 if ($authYes) {   // если тру
-                    header('Location: /');   // перебрасываем на главную страницу
+                    header('Location: /personalPage');   // перебрасываем на главную страницу
                 } else {
                     echo "Логин или пароль неправельны ... ";
                 }
