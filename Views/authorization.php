@@ -1,7 +1,4 @@
-<?php
-    $res = new App\Models\Product();
-    print_r($res->findAll());
-?>
+
 
 <!doctype html>
 <html lang="en">
@@ -22,6 +19,11 @@
                 <input type="text" name="authlogin" placeholder="Логин">
                 <input type="password" name="authpass" placeholder="Пароль">
                 <button type="submit" name="authbtn">Войти</button>
+
+                <?php
+                    $auth = new App\Models\User();
+                    $auth->authUser();
+                ?>
             </form>
         </div>
     </section>

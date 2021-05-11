@@ -47,4 +47,20 @@ class User extends Model
 
 
 
+    public function authUser() {
+        $class = get_called_class();
+
+        if(isset($_POST['authbtn'])) {
+            if(!empty($_POST['authlogin']) && !empty($_POST['authpass'])) {
+                $res = Model::findAll(static::$table, $class);
+                print_r($res);
+            } else {
+                echo "Не все поля заполнены";
+            }
+        }
+
+    }
+
+
+
 }
