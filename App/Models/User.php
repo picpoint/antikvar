@@ -26,7 +26,8 @@ class User extends Model
                 $userData[] = mb_strtolower($_POST['reglogin']);
                 $userData[] = password_hash($_POST['regpassword'], PASSWORD_DEFAULT);
 
-                $getUsrs = Model::findAll();
+                $class = get_called_class();
+                $getUsrs = Model::findAll(static::$table, $class);
 
                 foreach ($getUsrs as $usrs) {
                     $usersLogin[] = $usrs->login;

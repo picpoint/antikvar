@@ -12,7 +12,6 @@ abstract class Model
 
     public static function findAll($table, $class) {
         $db = new Db();
-//        $class = get_called_class();
         $sql = "SELECT * FROM " . $table;
         return $db->getData($sql, $class);
     }
