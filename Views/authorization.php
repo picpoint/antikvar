@@ -1,8 +1,7 @@
 <?php
-    $res = new App\Models\Product();
-    print_r($res->findAll());
+    $auth = new App\Models\User();
+    $auth->authUser();
 ?>
-
 <!doctype html>
 <html lang="en">
 <head>

@@ -9,7 +9,9 @@ abstract class Model
     public $id;
     public static $table = '';
 
-
+    /**
+     * поиск всех записей в таблице
+     */
     public static function findAll($table, $class) {
         $db = new Db();
         $sql = "SELECT * FROM " . $table;
@@ -17,6 +19,9 @@ abstract class Model
     }
 
 
+    /**
+     * регистрация пользователей
+     */
     public static function regUserModel($table, $userData) {
         $db = new Db();
         $firstname = $userData[0];
