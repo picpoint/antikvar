@@ -1,10 +1,126 @@
+//***********************************
+// MIXINS
+
+.mixinorders {
+  display: flex;
+  height: 45px;
+  transition: @transition;
+  &:hover {
+    background-color: @lightgray;
+    cursor: pointer;
+    transition: @transition;
+    a {
+      color: @darkgray;
+      font-weight: bolder;
+      font-size: 1.3rem;
+      transition: @transition;
+    }
+  }
+  a {
+    //border: @border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: @transition;
+  }
+}
+
+//***********************************
+
+
+
+
+
 .pp {
   display: flex;
   &__wrp {
-    border: @border;
+    display: flex;
     height: 100vh;
     width: 100vw;
-    background-image: url("/../../pict/bg2.jpg");
     background-size: cover;
   }
+  &__lblk {
+    //border: @border;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background-color: @darkgray;
+  }
+  &__lblkhdr {
+    //border: @border;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+      span {
+        color: white;
+        font-weight: bolder;
+        font-size: 1.5rem;
+      }
+  }
+  &__lblkmenu {
+    //border: @border;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__lblkorders {
+    .mixinorders();
+    margin-top: 25px;
+  }
+  &__lblkcatalog {
+    .mixinorders();
+  }
+  &__lblkfinance {
+    .mixinorders();
+  }
+  &__lblkdirectory {
+    .mixinorders();
+  }
+  &__lblktuning {
+    .mixinorders();
+  }
+
+
+  &__rblk {
+    //border: @border;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: @lightgray;
+  }
+  &__rblkhdr {
+    //border: @border;
+    border-bottom: 1px solid gray;
+    display: flex;
+    height: 60px;
+  }
+  &__rblkcontent {
+    //border: @border;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  &__rblkaddproduct {
+    //border: @border;
+    display: flex;
+    width: 700px;
+    height: 350px;
+    margin-top: 25px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+
+
+
+
+
 }

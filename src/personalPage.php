@@ -12,7 +12,38 @@
 
     <section class="pp">
         <div class="pp__wrp">
-            <h3>Личный кабинет</h3>
+            <div class="pp__lblk">
+                <div class="pp__lblkhdr">
+                    <span>Личный кабинет</span>
+                </div>
+                <div class="pp__lblkmenu">
+                    <div class="pp__lblkorders">
+                        <a href="orders.php">Заказы</a>
+                    </div>
+                    <div class="pp__lblkcatalog">
+                        <a href="catalog.php">Каталог</a>
+                    </div>
+                    <div class="pp__lblkfinance">
+                        <a href="finance.php">Финансы</a>
+                    </div>
+                    <div class="pp__lblkdirectory">
+                        <a href="directory.php">Справочник</a>
+                    </div>
+                    <div class="pp__lblktuning">
+                        <a href="tuning.php">Настройка</a>
+                    </div>
+                </div>
+            </div>
+            <div class="pp__rblk">
+                <div class="pp__rblkhdr">
+
+                </div>
+                <div class="pp__rblkcontent">
+                    <div class="pp__rblkaddproduct">
+
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
