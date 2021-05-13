@@ -46,6 +46,7 @@
                         ?>
                     </span>
                     <button>Exit</button>
+
                 </div>
                 <div class="pp__rblkcontent">
                     <div class="pp__rblkaddproduct">
