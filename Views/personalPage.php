@@ -36,11 +36,52 @@
             </div>
             <div class="pp__rblk">
                 <div class="pp__rblkhdr">
-
+                    <span>login</span>
+                    <span>Exit</span>
                 </div>
                 <div class="pp__rblkcontent">
                     <div class="pp__rblkaddproduct">
+                        <span>Загрузить антиквариат</span>
+                        <form method="post" class="pp__rblkuploadform" name="rblkupload" enctype="multipart/form-data">
+                            <input type="file" name="prodphoto">
+                            <input type="text" name="prodarticle" placeholder="Артикул товара(если Вам известен)">
+                            <input type="text" name="prodname" placeholder="Название товара">
+                            <input type="text" name="prodprice" placeholder="Цена(за которую Вы хотите продать)">
+                            <textarea name="proddesc" id="proddesc" cols="30" rows="10" placeholder="Описание товара"></textarea>
+                            <select name="prodcategory" id="prodcategory">
+                                <option value="bons">Бонистика</option>
+                                <option value="coins">Монеты</option>
+                                <option value="books">Книги</option>
+                                <option value="military">Милитария</option>
+                                <option value="postmarks">Почтовые марки</option>
+                                <option value="handmade">Ручная работа</option>
+                                <option value="mail_envelopes">Почтовые открытки</option>
+                                <option value="transport">Транспорт</option>
+                                <option value="orders">Ордена/медали</option>
+                                <option value="hobby">Хобби</option>
+                                <option value="photo">Фотографии</option>
+                                <option value="icons">Иконы</option>
+                                <option value="ceramik">Фарфор и керамика</option>
+                                <option value="dishes">Кухонная утварь</option>
+                                <option value="painting">Живопись и графика</option>
+                                <option value="other">Разное</option>
+                                <option value="glass">Стекло и хрусталь</option>
+                                <option value="interyer">Интерьер</option>
+                                <option value="maps">Карты и плакаты</option>
+                                <option value="jewelry">Ювелирные изделия</option>
+                                <option value="furniture">Фурнитура</option>
+                                <option value="tech">Техника</option>
+                            </select>
+                            <button type="submit">Загрузить</button>
+                        </form>
+                    </div>
+                    <div class="pp__rblkmycatalog">
+                        <div class="pp__rblkmycataloghdr">
+                            <span>Каталог моего антиквариата</span>
+                        </div>
+                        <div class="pp__rblkmycatalogcontent">
 
+                        </div>
                     </div>
                 </div>
             </div>
