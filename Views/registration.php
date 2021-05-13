@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     $res = new App\Models\User();
     $res->regUser();
 ?>

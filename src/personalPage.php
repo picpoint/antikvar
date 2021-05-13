@@ -40,7 +40,7 @@
             </div>
             <div class="pp__rblk">
                 <div class="pp__rblkhdr">
-                    <span>
+                    <span> Добро пожаловать
                         <?php
                             echo $_SESSION['login'];
                         ?>

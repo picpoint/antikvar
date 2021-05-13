@@ -38,7 +38,8 @@ class User extends Model
 
                 if (!in_array($_POST['reglogin'], $usersLogin)) {   // если логина нет в перебираемом массиве
                     Model::regUserModel(static::$table, $userData);   // регистрируем пользователя
-                    $_SESSION['login'] = 'testReg';
+                    $_SESSION['login'] = $_POST['reglogin'];
+                    $_SESSION['password'] = $userData[3];
                     header("Location: /personalPage");
                 } else {
                     echo "Пользователь с таким логином уже существует";
@@ -71,7 +72,8 @@ class User extends Model
                 }
 
                 if ($authYes) {   // если тру
-                    $_SESSION['login'] = 'testAuth';
+                    $_SESSION['login'] = $_POST['authlogin'];
+                    $_SESSION['password'] = $rs->
                     header('Location: /personalPage');   // перебрасываем на главную страницу
                 } else {
                     echo "Логин или пароль неправельны ... ";

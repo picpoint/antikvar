@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     $auth = new App\Models\User();
     $auth->authUser();
 ?>
