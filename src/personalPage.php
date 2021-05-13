@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    setcookie($_SESSION['login'], $_SESSION['password'], time() + 86400, '/');
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,7 +40,11 @@
             </div>
             <div class="pp__rblk">
                 <div class="pp__rblkhdr">
-                    <span>login</span>
+                    <span>
+                        <?php
+                            echo $_SESSION['login'];
+                        ?>
+                    </span>
                     <span>Exit</span>
                 </div>
                 <div class="pp__rblkcontent">
@@ -77,7 +85,7 @@
                     </div>
                     <div class="pp__rblkmycatalog">
                         <div class="pp__rblkmycataloghdr">
-                            <span>Каталог моего антиквариата</span>
+                            <span>Мой антиквариат</span>
                         </div>
                         <div class="pp__rblkmycatalogcontent">
 
