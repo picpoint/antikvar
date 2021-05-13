@@ -45,7 +45,7 @@
                             echo $_SESSION['login'];
                         ?>
                     </span>
-                    <span>Exit</span>
+                    <button>Exit</button>
                 </div>
                 <div class="pp__rblkcontent">
                     <div class="pp__rblkaddproduct">
@@ -57,6 +57,7 @@
                             <input type="text" name="prodprice" placeholder="Цена(за которую Вы хотите продать)">
                             <textarea name="proddesc" id="proddesc" cols="30" rows="10" placeholder="Описание товара"></textarea>
                             <select name="prodcategory" id="prodcategory">
+                                <option value="">Выбирите категорию товара</option>
                                 <option value="bons">Бонистика</option>
                                 <option value="coins">Монеты</option>
                                 <option value="books">Книги</option>

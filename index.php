@@ -21,6 +21,9 @@ if($route == '/') {
 } elseif ($route == '/personalPage') {
     $page = new Index();
     $page->actionPersonalPage();
+} elseif ($route == '/exit') {
+    $page = new Index();
+    $page->actionExit();
 } else {
     $page = new Index();
     $page->actionPageNotFound();

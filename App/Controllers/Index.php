@@ -30,6 +30,13 @@ class Index
         $page->display('Views/personalPage.php');
     }
 
+
+    public function actionExit() {
+        $page = new View();
+        $page->display('Views/exit.php');
+    }
+
+
     public function actionPageNotFound() {
         $page = new View();
         $page->display('Views/404.php');

@@ -58,6 +58,7 @@ class User extends Model
      */
     public function authUser() {
         $class = get_called_class();   // получаем имя данного класса
+        $passHash = '';
 
         if(isset($_POST['authbtn'])) {   // если нажата кнопка "войти"
             if(!empty($_POST['authlogin']) && !empty($_POST['authpass'])) {   // если не пустые поля
@@ -67,13 +68,14 @@ class User extends Model
                 foreach ($res as $rs) {   // перебираем полученные записи
                     if($_POST['authlogin'] == $rs->login && password_verify($_POST['authpass'], $rs->password)) {   // если введённый логин есть и пароль соответствует хешу
                         $authYes = true;   // переменной присваиваем тру
+                        $passHash = $rs->password;
                     }
 
                 }
 
                 if ($authYes) {   // если тру
                     $_SESSION['login'] = $_POST['authlogin'];
-                    $_SESSION['password'] = $rs->
+                    $_SESSION['password'] = $passHash;
                     header('Location: /personalPage');   // перебрасываем на главную страницу
                 } else {
                     echo "Логин или пароль неправельны ... ";
@@ -85,6 +87,13 @@ class User extends Model
             }
         }
 
+    }
+
+
+    public function logOutUser() {
+        session_destroy();
+        setcookie($_SESSION['login'], $_SESSION['password'], time() - 86400, '/');
+        header('Location: /');
     }
 
 
