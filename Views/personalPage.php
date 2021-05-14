@@ -45,7 +45,8 @@
                             echo $_SESSION['login'];
                         ?>
                     </span>
-                    <button>Exit</button>
+                    <a href="/">Выход</a>
+
                 </div>
                 <div class="pp__rblkcontent">
                     <div class="pp__rblkaddproduct">
@@ -81,7 +82,11 @@
                                 <option value="furniture">Фурнитура</option>
                                 <option value="tech">Техника</option>
                             </select>
-                            <button type="submit">Загрузить</button>
+                            <button type="submit" name="uploadprod">Загрузить</button>
+                            <?php
+                                $upl = new App\Models\Product();
+                                $upl->uploadProduct();
+                            ?>
                         </form>
                     </div>
                     <div class="pp__rblkmycatalog">

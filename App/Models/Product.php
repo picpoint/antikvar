@@ -17,5 +17,12 @@ class Product extends Model
 
 
 
+    public function uploadProduct() {
+        if (isset($_POST['uploadprod'])) {
+            print_r($_FILES);
+        }
+    }
+
+
 
 }
