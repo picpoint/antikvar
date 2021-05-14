@@ -48,13 +48,15 @@ class Product extends Model
 
                 $pathToDir = __DIR__. '/../../public/usersFolders/' . $userLogin;
                 echo $pathToDir;
+                echo "<br>";
+                echo time();
 
 
                 if (!file_exists($pathToDir)) {
                     mkdir($pathToDir, 0777);
-                    move_uploaded_file($_FILES['prodphoto']['tmp_name'], $pathToDir . '/' . $_FILES['prodphoto']['name']);
+                    move_uploaded_file($_FILES['prodphoto']['tmp_name'], $pathToDir . '/' . time() . '_' . $_FILES['prodphoto']['name']);
                 } else {
-                    move_uploaded_file($_FILES['prodphoto']['tmp_name'], $pathToDir . '/' . $_FILES['prodphoto']['name']);
+                    move_uploaded_file($_FILES['prodphoto']['tmp_name'], $pathToDir . '/' . time() . '_' . $_FILES['prodphoto']['name']);
                 }
 
 
