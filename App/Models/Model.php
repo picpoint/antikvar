@@ -33,7 +33,10 @@ abstract class Model
     }
 
 
-    public static function insert() {
+    public static function insert($arrData) {
+        $db = new Db();
+        $user = $arrData[0];
+
 
     }
 
