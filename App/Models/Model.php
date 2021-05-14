@@ -33,4 +33,9 @@ abstract class Model
     }
 
 
+    public static function insert() {
+
+    }
+
+
 }
