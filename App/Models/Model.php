@@ -43,8 +43,6 @@ abstract class Model
         $prodcategory = $arrData[5];
         $pathPhoto = $arrData[6];
         $sql = "INSERT INTO " . $table . " (user, articule, name, price, description, category, photo) VALUES ('$user', '$prodarticle', '$prodname', '$prodprice', '$proddesc', '$prodcategory', '$pathPhoto') ";
-        print_r($sql);
-        die;
         $db->save($sql);
 
 

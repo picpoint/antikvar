@@ -27,14 +27,6 @@ class Product extends Model
                 $pathToDir = __DIR__. '/../../public/usersFolders/' . $userLogin;
                 $namePhoto = time() . '_' . $_FILES['prodphoto']['name'];
 
-                if (!file_exists($pathToDir)) {
-                    mkdir($pathToDir, 0777);
-                    move_uploaded_file($_FILES['prodphoto']['tmp_name'], $pathToDir . '/' . $namePhoto);
-                } else {
-                    move_uploaded_file($_FILES['prodphoto']['tmp_name'], $pathToDir . '/' . $namePhoto);
-                }
-
-
                 $arrProd[] = $userLogin;
                 $arrProd[] = $_POST['prodarticle'];
                 $arrProd[] = $_POST['prodname'];
@@ -43,9 +35,14 @@ class Product extends Model
                 $arrProd[] = $_POST['prodcategory'];
                 $arrProd[] = $namePhoto;
 
+                if (!file_exists($pathToDir)) {
+                    mkdir($pathToDir, 0777);
+                    move_uploaded_file($_FILES['prodphoto']['tmp_name'], $pathToDir . '/' . $namePhoto);
+                } else {
+                    move_uploaded_file($_FILES['prodphoto']['tmp_name'], $pathToDir . '/' . $namePhoto);
+                }
+
                 Model::insert($arrProd, static::$table);
-
-
 
             } else {
                 echo "Одно из полей не заполнено ...";
