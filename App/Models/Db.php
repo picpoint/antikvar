@@ -38,7 +38,7 @@ class Db
         $sth->execute();
     }
 
-    
+
 
 
 

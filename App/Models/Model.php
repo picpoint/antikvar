@@ -36,8 +36,11 @@ abstract class Model
     /**
      * метод встаки в БД данных
      */
-    public static function insert($arrData, $table) {
+    public static function insert($arrData, $table, $params) {
         $db = new Db();
+        $ks = [];
+        $vls = [];
+
         $user = $arrData[0];
         $prodarticle = $arrData[1];
         $prodname = $arrData[2];
@@ -45,7 +48,19 @@ abstract class Model
         $proddesc = $arrData[4];
         $prodcategory = $arrData[5];
         $pathPhoto = $arrData[6];
-        $sql = "INSERT INTO " . $table . " (user, articule, name, price, description, category, photo) VALUES ('$user', '$prodarticle', '$prodname', '$prodprice', '$proddesc', '$prodcategory', '$pathPhoto') ";
+
+        foreach ($params as $key => $value) {
+            if ($key == 'id') {
+                continue;
+            }
+            $ks[] = $key;
+            $vls[] = $value;
+        }
+
+//        $sql = "INSERT INTO " . $table . " (user, articule, name, price, description, category, photo) VALUES ('$user', '$prodarticle', '$prodname', '$prodprice', '$proddesc', '$prodcategory', '$pathPhoto') ";
+        $sql = "INSERT INTO " . $table . " (" . implode(", ", $ks) .  ") VALUES ('" . implode("', '", $arrData) . "')";
+        print_r($sql);
+        die;
         $db->save($sql);
 
 
