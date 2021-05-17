@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 12 2021 г., 23:34
+-- Время создания: Май 17 2021 г., 20:28
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -29,22 +29,27 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `products` (
   `id` bigint(20) UNSIGNED NOT NULL,
+  `user` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `articule` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` int(11) NOT NULL,
   `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `category` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `photo` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date_of_create` timestamp NOT NULL
+  `date_of_create` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Дамп данных таблицы `products`
 --
 
-INSERT INTO `products` (`id`, `articule`, `name`, `price`, `description`, `category`, `photo`, `date_of_create`) VALUES
-(1, '314564357', 'Швецарский франк', 12000, 'Франк выпуска 1873 года. В отличном состоянии', 'coins', '', '0000-00-00 00:00:00'),
-(2, '64590054', 'Карта Орловской области', 3567, 'Карта Орловской области выпуска 1643 года', 'maps', '', '0000-00-00 00:00:00');
+INSERT INTO `products` (`id`, `user`, `articule`, `name`, `price`, `description`, `category`, `photo`, `date_of_create`) VALUES
+(1, '', '314564357', 'Швецарский франк', 12000, 'Франк выпуска 1873 года. В отличном состоянии', 'coins', '', '0000-00-00 00:00:00'),
+(2, '', '64590054', 'Карта Орловской области', 3567, 'Карта Орловской области выпуска 1643 года', 'maps', '', '0000-00-00 00:00:00'),
+(3, 'dens', '111452_A', 'Бокал', 1577, 'Бокал образца 1800 г', 'dishes', '1621273853_unnamed.jpg', '2021-05-17 17:51:21'),
+(4, 'dens', '12458P', 'Патифон', 47899, 'Патифон петра великого', 'tech', '1621274125_unnamed.png', '2021-05-17 17:55:25'),
+(5, 'dens', '0001', 'Чайник', 5800, 'Чайник династии \"дзын\"', 'dishes', '1621274530_IMG_4467-1.jpg', '2021-05-17 18:02:10'),
+(6, 'dens', '0001', 'Чайник', 3000, 'Чайничек', 'other', '1621274567_IMG_4467-1.jpg', '2021-05-17 18:02:47');
 
 -- --------------------------------------------------------
 
@@ -98,7 +103,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
