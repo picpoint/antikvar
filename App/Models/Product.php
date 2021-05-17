@@ -16,7 +16,9 @@ class Product extends Model
     public static $table = 'products';
 
 
-
+    /**
+     * Метод для загрузки картинки в папки пользователей и сохранение записи в БД
+     */
     public function uploadProduct() {
         if (isset($_POST['uploadprod'])) {
             $arrProd = [];

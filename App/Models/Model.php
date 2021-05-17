@@ -33,6 +33,9 @@ abstract class Model
     }
 
 
+    /**
+     * метод встаки в БД данных
+     */
     public static function insert($arrData, $table) {
         $db = new Db();
         $user = $arrData[0];
