@@ -19,6 +19,13 @@ abstract class Model
     }
 
 
+    public static function findAllLotsCurrentUser($table, $user, $class) {
+        $db = new Db();
+        $sql = "SELECT * FROM " . $table . " WHERE user='$user'";
+        return $db->getData($sql, $class);
+    }
+
+
     /**
      * регистрация пользователей
      */
@@ -49,7 +56,6 @@ abstract class Model
 
         $sql = "INSERT INTO " . $table . " (user, articule, name, price, description, category, photo) VALUES ('$user', '$prodarticle', '$prodname', '$prodprice', '$proddesc', '$prodcategory', '$pathPhoto') ";
         $db->save($sql);
-
     }
 
 

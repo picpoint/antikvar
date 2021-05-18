@@ -94,7 +94,10 @@
                             <span>Мой антиквариат</span>
                         </div>
                         <div class="pp__rblkmycatalogcontent">
-
+                            <?php
+                                $show = new App\Models\Product();
+                                print_r($show->showLots());
+                            ?>
                         </div>
                     </div>
                 </div>

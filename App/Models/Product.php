@@ -55,6 +55,17 @@ class Product extends Model
 
 
 
+    public function showLots() {
+        $class = get_called_class();
+        $userLogin = $_SESSION['login'];
+
+        return Model::findAllLotsCurrentUser(static::$table, $userLogin, $class);
+
+
+    }
+
+
+
 }
 
 
