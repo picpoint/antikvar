@@ -36,10 +36,8 @@ abstract class Model
     /**
      * метод встаки в БД данных
      */
-    public static function insert($arrData, $table, $params) {
+    public static function insert($arrData, $table) {
         $db = new Db();
-        $ks = [];
-        $vls = [];
 
         $user = $arrData[0];
         $prodarticle = $arrData[1];
@@ -49,20 +47,8 @@ abstract class Model
         $prodcategory = $arrData[5];
         $pathPhoto = $arrData[6];
 
-        foreach ($params as $key => $value) {
-            if ($key == 'id') {
-                continue;
-            }
-            $ks[] = $key;
-            $vls[] = $value;
-        }
-
-//        $sql = "INSERT INTO " . $table . " (user, articule, name, price, description, category, photo) VALUES ('$user', '$prodarticle', '$prodname', '$prodprice', '$proddesc', '$prodcategory', '$pathPhoto') ";
-        $sql = "INSERT INTO " . $table . " (" . implode(", ", $ks) .  ") VALUES ('" . implode("', '", $arrData) . "')";
-        print_r($sql);
-        die;
+        $sql = "INSERT INTO " . $table . " (user, articule, name, price, description, category, photo) VALUES ('$user', '$prodarticle', '$prodname', '$prodprice', '$proddesc', '$prodcategory', '$pathPhoto') ";
         $db->save($sql);
-
 
     }
 

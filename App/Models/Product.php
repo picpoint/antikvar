@@ -28,7 +28,6 @@ class Product extends Model
                 $userLogin = $_SESSION['login'];
                 $pathToDir = __DIR__. '/../../public/usersFolders/' . $userLogin;
                 $namePhoto = time() . '_' . $_FILES['prodphoto']['name'];
-                $params = get_object_vars($this);
 
                 $arrProd[] = $userLogin;
                 $arrProd[] = $_POST['prodarticle'];
@@ -45,7 +44,7 @@ class Product extends Model
                     move_uploaded_file($_FILES['prodphoto']['tmp_name'], $pathToDir . '/' . $namePhoto);
                 }
 
-                Model::insert($arrProd, static::$table, $params);
+                Model::insert($arrProd, static::$table);
 
             } else {
                 echo "Одно из полей не заполнено ...";
