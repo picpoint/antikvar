@@ -203,9 +203,31 @@
   &__rblkmycatalogcontent {
     //border: @border;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     height: 100%;
     width: 100%;
+  }
+
+  &__lot {
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 170px;
+    height: 210px;
+    border-radius: 7px;
+    margin: 10px;
+      img {
+        height: 50%;
+      }
+      span {
+        &:nth-child(1) {
+          font-style: italic;
+          color: gray;
+        }
+      }
   }
 
 

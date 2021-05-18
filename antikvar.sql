@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Май 17 2021 г., 22:27
+-- Время создания: Май 18 2021 г., 22:51
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.4.5
 
@@ -48,7 +48,8 @@ INSERT INTO `products` (`id`, `user`, `articule`, `name`, `price`, `description`
 (5, 'arhipserg', '0044', 'Картина', 34500, 'Картина Васнецова \"море море\"', 'painting', '1621278600_images.jpg', '2021-05-17 19:10:00'),
 (6, 'arhipserg', '111452_A', 'Картина', 2000, 'Корабль на волнах', 'painting', '1621278660_images.jpg', '2021-05-17 19:11:00'),
 (7, 'igormartin', '0001', 'Ларец', 67000, 'Ларец для подарков', 'handmade', '1621278896_52816-512x384.jpg', '2021-05-17 19:14:56'),
-(8, 'igormartin', '0001', 'Статуетка', 40500, 'На охоте.\r\nМеталл бронза', 'interyer', '1621279583_2020-06-0906.800.jpg', '2021-05-17 19:26:23');
+(8, 'igormartin', '0001', 'Статуетка', 40500, 'На охоте.\r\nМеталл бронза', 'interyer', '1621279583_2020-06-0906.800.jpg', '2021-05-17 19:26:23'),
+(9, 'dens', '001', 'Бокал', 3000, 'боказ позолото', 'other', '1621359820_9051756135.jpg', '2021-05-18 17:43:40');
 
 -- --------------------------------------------------------
 
@@ -104,7 +105,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

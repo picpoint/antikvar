@@ -95,9 +95,17 @@
                         </div>
                         <div class="pp__rblkmycatalogcontent">
                             <?php
-                                $show = new App\Models\Product();
-                                print_r($show->showLots());
+//                              $show = new App\Models\Product();
+//                              print_r($show->showLots());
+
+                                $showLots = new App\Controllers\ProductC();
+                                $showLots->showLots();
                             ?>
+
+<!--                            <div class="pp__lot">-->
+<!--                                -->
+<!--                            </div>-->
+
                         </div>
                     </div>
                 </div>

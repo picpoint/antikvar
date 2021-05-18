@@ -54,14 +54,13 @@ class Product extends Model
     }
 
 
-
+    /**
+     * метод получения всех лотов антиквариата текущего пользователя
+     */
     public function showLots() {
         $class = get_called_class();
         $userLogin = $_SESSION['login'];
-
         return Model::findAllLotsCurrentUser(static::$table, $userLogin, $class);
-
-
     }
 
 

@@ -19,6 +19,9 @@ abstract class Model
     }
 
 
+    /**
+     * метод для запросе в БД, получить все записи текущего пользователя
+     */
     public static function findAllLotsCurrentUser($table, $user, $class) {
         $db = new Db();
         $sql = "SELECT * FROM " . $table . " WHERE user='$user'";
