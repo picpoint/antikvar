@@ -64,6 +64,12 @@ class Product extends Model
     }
 
 
+    public function showAllLotsUsers() {
+        $class = get_called_class();
+        return Model::findAll(static::$table, $class);
+    }
+
+
 
 }
 

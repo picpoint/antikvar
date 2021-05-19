@@ -48,7 +48,6 @@ abstract class Model
      */
     public static function insert($arrData, $table) {
         $db = new Db();
-
         $user = $arrData[0];
         $prodarticle = $arrData[1];
         $prodname = $arrData[2];
@@ -56,7 +55,6 @@ abstract class Model
         $proddesc = $arrData[4];
         $prodcategory = $arrData[5];
         $pathPhoto = $arrData[6];
-
         $sql = "INSERT INTO " . $table . " (user, articule, name, price, description, category, photo) VALUES ('$user', '$prodarticle', '$prodname', '$prodprice', '$proddesc', '$prodcategory', '$pathPhoto') ";
         $db->save($sql);
     }

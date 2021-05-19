@@ -139,7 +139,10 @@
                         </div>
                     </div>
                     <div class="indx__bdycatalog">
-
+                        <?php
+                            $show = new \App\Controllers\ProductC();
+                            $show->showCatalog();
+                        ?>
                     </div>
                 </div>
             </div>
