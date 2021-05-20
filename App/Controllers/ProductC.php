@@ -25,6 +25,30 @@ class ProductC
     }
 
 
+    public function showLotsByCategory($category) {
+
+        if (isset($_GET['cat'])) {
+            echo $_GET['cat'];
+        } else {
+            echo "not get";
+            die;
+        }
+
+        $res = new Product();
+        $lotBycategory = $res->showCategory($category);
+
+        foreach ($lotBycategory as $rs) {
+            echo "<div class=\"pp__lot\">
+                <img src='/../public/usersFolders/$rs->user/$rs->photo' alt='$rs->photo'>
+                <span>$rs->articule</span>
+                <span>$rs->name</span>
+                <span>$rs->price</span>
+                <span>$rs->category</span>
+            </div>";
+        }
+    }
+
+
     public function showCatalog() {
         $res = new Product();
         $lots = $res->showAllLotsUsers();

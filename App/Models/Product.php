@@ -70,6 +70,12 @@ class Product extends Model
     }
 
 
+    public function showCategory($category) {
+        $class = get_called_class();
+        return Model::findLotsByCategory(static::$table, $category, $class);
+    }
+
+
 
 }
 

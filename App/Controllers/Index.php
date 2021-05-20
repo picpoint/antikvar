@@ -37,10 +37,10 @@ class Index
     }
 
 
-    public function actionPageNotFound() {
-        $page = new View();
-        $page->display('Views/404.php');
-    }
+//    public function actionPageNotFound() {
+//        $page = new View();
+//        $page->display('Views/404.php');
+//    }
 
 
 

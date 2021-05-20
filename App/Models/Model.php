@@ -29,6 +29,13 @@ abstract class Model
     }
 
 
+    public static function findLotsByCategory($table, $category, $class) {
+        $db = new Db();
+        $sql = "SELECT * FROM " . $table . " WHERE category='$category'";
+        return $db->getData($sql, $class);
+    }
+
+
     /**
      * регистрация пользователей
      */

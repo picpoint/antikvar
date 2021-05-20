@@ -69,7 +69,7 @@
                         </div>
                         <div class="indx__bdycategorysections">
                             <div class="indx__bdybons">
-                                <a href="#"><img src="/../public/pict/bons.png" alt="bons"><span>Бонистика</span></a>
+                                <a href="?cat=bons"><img src="/../public/pict/bons.png" alt="bons"><span>Бонистика</span></a>
                             </div>
                             <div class="indx__bdycoins">
                                 <a href="#"><img src="/../public/pict/coins.png" alt="coins"><span>Монеты</span></a>
@@ -141,7 +141,8 @@
                     <div class="indx__bdycatalog">
                         <?php
                             $show = new \App\Controllers\ProductC();
-                            $show->showCatalog();
+//                            $show->showCatalog();
+                            $show->showLotsByCategory($_GET['cat']);
                         ?>
                     </div>
                 </div>

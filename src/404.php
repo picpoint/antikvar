@@ -16,6 +16,12 @@
         <div class="pnf__wrp">
             <h1>404</h1>
             <h3>Page not found ...</h3>
+
+            <?php
+                print_r($_GET['cat']);
+                echo "<br>";
+            ?>
+
         </div>
     </section>
 

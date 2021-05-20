@@ -24,10 +24,12 @@ if($route == '/') {
 } elseif ($route == '/exit') {
     $page = new Index();
     $page->actionExit();
-} else {
-    $page = new Index();
-    $page->actionPageNotFound();
 }
+
+//else {
+//    $page = new Index();
+//    $page->actionPageNotFound();
+//}
 
 
 
