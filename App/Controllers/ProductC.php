@@ -25,13 +25,32 @@ class ProductC
     }
 
 
-    public function showLotsByCategory($category) {
+    public function showLotsByCategory() {
 
-        if (isset($_GET['cat'])) {
-            echo $_GET['cat'];
-        } else {
-            echo "not get";
-            die;
+        $category = '';
+
+        if (isset($_POST['btnbons'])) {
+            $category = 'bons';
+        } elseif (isset($_POST['btncoins'])) {
+            $category = 'coins';
+        } elseif (isset($_POST['btnbooks'])) {
+            $category = 'books';
+        } elseif (isset($_POST['btnmilitary'])) {
+            $category = 'military';
+        } elseif (isset($_POST['btnpostmarks'])) {
+            $category = 'postmarks';
+        } elseif (isset($_POST['btnhandmade'])) {
+            $category = 'handmade';
+        } elseif (isset($_POST['btnenvelopes'])) {
+            $category = 'envelopes';
+        } elseif (isset($_POST['btntransport'])) {
+            $category = 'transport';
+        } elseif (isset($_POST['btnorders'])) {
+            $category = 'orders';
+        } elseif (isset($_POST['btnhobby'])) {
+            $category = 'hobby';
+        } elseif (isset($_POST['btnphoto'])) {
+            $category = 'photo';
         }
 
         $res = new Product();
