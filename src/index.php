@@ -69,6 +69,12 @@
                         </div>
                         <div class="indx__bdycategorysections">
                             <form method="post">
+                                <div class="indx__bdyall">
+                                    <button type="submit" name="btnall">
+                                        <img src="/../public/pict/all.png" alt="all">
+                                        <span>Весь каталог</span>
+                                    </button>
+                                </div>
                                 <div class="indx__bdybons">
                                     <button type="submit" name="btnbons">
                                         <img src="/../public/pict/bons.png" alt="bons">

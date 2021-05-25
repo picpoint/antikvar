@@ -51,7 +51,32 @@ class ProductC
             $category = 'hobby';
         } elseif (isset($_POST['btnphoto'])) {
             $category = 'photo';
+        } elseif (isset($_POST['btnicons'])) {
+            $category = 'icons';
+        } elseif (isset($_POST['btnceramik'])) {
+            $category = 'ceramik';
+        } elseif (isset($_POST['btndishes'])) {
+            $category = 'dishes';
+        } elseif (isset($_POST['btnother'])) {
+            $category = 'other';
+        } elseif (isset($_POST['btnglass'])) {
+            $category = 'glass';
+        } elseif (isset($_POST['btninteryer'])) {
+            $category = 'interyer';
+        } elseif (isset($_POST['btnmaps'])) {
+            $category = 'maps';
+        } elseif (isset($_POST['btnjewelry'])) {
+            $category = 'jewelry';
+        } elseif (isset($_POST['btnfurniture'])) {
+            $category = 'furniture';
+        } elseif (isset($_POST['btntech'])) {
+            $category = 'tech';
+        } elseif ($category == '') {
+            $this->showCatalog();
+            return;
         }
+
+
 
         $res = new Product();
         $lotBycategory = $res->showCategory($category);
